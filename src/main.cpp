@@ -13,9 +13,9 @@ int main(void)
         return -1;
     }
 
-    glfwMakeContextCurrent(window); // create opengl rendering context
+    glfwMakeContextCurrent(window);
 
-    if(glewInit() != GLEW_OK) return -1; // intialize glew
+    if(glewInit() != GLEW_OK) return -1;
 
     GLfloat vertex_buffer_data[] = { -.5f, -.5f, 0.0f,
                                      0.5f, -.5f, 0.0f,
@@ -23,8 +23,11 @@ int main(void)
                                    };
 
     GLuint vertextbuffer;
+
     glGenBuffers(1, &vertextbuffer);
+
     glBindBuffer(GL_ARRAY_BUFFER, vertextbuffer);
+
     glBufferData(GL_ARRAY_BUFFER,sizeof(vertex_buffer_data),vertex_buffer_data,GL_STATIC_DRAW);
 
     glEnableVertexAttribArray(0);
