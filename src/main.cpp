@@ -12,7 +12,6 @@ const GLuint WIDTH = 800, HEIGHT = 600;
 
 int main()
 {
-    std::cout << "Starting GLFW context, OpenGL 4.1" << std::endl;
     // Init GLFW
     glfwInit();
     // Set all the required options for GLFW

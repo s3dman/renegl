@@ -13,7 +13,7 @@ include_directories(${GLFW_INCLUDE_DIRS})
 # glad
 set(GLAD_SOURCES_DIR "${PROJECT_SOURCE_DIR}/external/glad/")
 add_subdirectory("${GLAD_SOURCES_DIR}/cmake" glad_cmake)
-glad_add_library(lglad SHARED API gl:core=4.1)
+glad_add_library(lglad SHARED API gl:core=3.3)
 
 
 set(SOURCE_FILES src/main.cpp)
