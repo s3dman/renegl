@@ -11,5 +11,5 @@ fn main() {
     let window = Window::new(&event_loop).unwrap();
     window.set_title("renegl");
 
-    event_loop.run(move)
+    event_loop.run(move);
 }
