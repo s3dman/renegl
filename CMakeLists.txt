@@ -15,8 +15,11 @@ set(GLAD_SOURCES_DIR "${PROJECT_SOURCE_DIR}/external/glad/")
 add_subdirectory("${GLAD_SOURCES_DIR}/cmake" glad_cmake)
 glad_add_library(lglad SHARED API gl:core=3.3)
 
-
 set(SOURCE_FILES src/main.cpp)
+configure_file(src/vert.glsl ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
+configure_file(src/frag.glsl ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
+
+
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
 target_link_libraries(${PROJECT_NAME} PUBLIC lglad glfw)
